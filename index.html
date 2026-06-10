@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dr. Kiran Stallone - Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#757682",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-surface-variant": "#444651",
+                        "background": "#f9f9f8",
+                        "on-secondary-fixed-variant": "#8e1214",
+                        "inverse-surface": "#2f3130",
+                        "secondary-container": "#ff665c",
+                        "primary-fixed": "#dce1ff",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#a4acc5",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "on-secondary-fixed": "#410002",
+                        "tertiary-container": "#384055",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-primary-fixed-variant": "#264191",
+                        "primary": "#00236f",
+                        "outline-variant": "#c5c5d3",
+                        "on-primary-fixed": "#00164e",
+                        "primary-container": "#1e3a8a",
+                        "inverse-primary": "#b6c4ff",
+                        "inverse-on-surface": "#f1f1f0",
+                        "secondary": "#b02d29",
+                        "tertiary": "#222a3e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "surface-container-high": "#e8e8e7",
+                        "surface-dim": "#dadad9",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeed",
+                        "surface-tint": "#4059aa",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed": "#ffdad6",
+                        "surface-container-low": "#f3f4f3",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#90a8ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#690007",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed": "#dae2fd",
+                        "surface": "#f9f9f8",
+                        "surface-bright": "#f9f9f8",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "element-gap": "24px",
+                        "section-padding-y": "96px",
+                        "margin-page": "clamp(24px, 5vw, 96px)"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "quote": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "quote": ["28px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bento-card {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.outline-variant');
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 40px rgba(0, 35, 111, 0.02);
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 10px 50px rgba(0, 35, 111, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md">
+    <!-- Mobile Menu Drawer Backdrop -->
+    <div id="mobile-menu-backdrop"
+        class="fixed inset-0 bg-black/50 z-50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-drawer"
+        class="fixed top-0 left-0 w-80 max-w-[85vw] h-full bg-surface z-50 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col border-r border-outline-variant/30">
+        <!-- Header of Drawer -->
+        <div class="flex items-center justify-between px-6 py-8 border-b border-outline-variant/20">
+            <a href="#" class="mobile-nav-link font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors duration-300">
+                Dr. Kiran Stallone
+            </a>
+            <button id="mobile-menu-close"
+                class="text-primary hover:text-secondary transition-colors duration-300 flex items-center">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <!-- Navigation Links inside Drawer -->
+        <nav class="flex flex-col gap-6 p-8">
+            <a class="mobile-nav-link font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest text-lg py-2 border-b border-outline-variant/10"
+                href="#academic-work">Academic Work</a>
+            <a class="mobile-nav-link font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest text-lg py-2 border-b border-outline-variant/10"
+                href="#consultancy">Consultancy</a>
+            <a class="mobile-nav-link font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest text-lg py-2 border-b border-outline-variant/10"
+                href="#media">Media</a>
+            <a class="mobile-nav-link font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest text-lg py-2"
+                href="#contact">Contact</a>
+        </nav>
+
+        <!-- Social links in Drawer -->
+        <div class="mt-auto p-8 border-t border-outline-variant/20 flex gap-6 text-primary">
+            <a class="hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps uppercase"
+                href="#">LinkedIn</a>
+            <a class="hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps uppercase"
+                href="#">X</a>
+        </div>
+    </div>
+
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface/90 dark:bg-surface/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center w-full px-margin-page py-6 max-w-container-max mx-auto">
+            <!-- Left: Hamburger Menu (Mobile only) -->
+            <div class="flex items-center lg:hidden w-1/4">
+                <button id="mobile-menu-btn"
+                    class="text-primary dark:text-primary-fixed-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 flex items-center">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+
+            <!-- Center (Mobile) / Left (Desktop): Branding -->
+            <a href="#" class="flex-1 lg:flex-initial text-center lg:text-left group block">
+                <h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed tracking-tight group-hover:text-secondary transition-colors duration-300">Dr.
+                    Kiran Stallone</h1>
+                <p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mt-1 group-hover:text-secondary/80 transition-colors duration-300">
+                    Academic | Gender Consultant</p>
+            </a>
+
+            <!-- Center (Desktop): Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 mx-8"><a
+                    class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest"
+                    href="#academic-work">Academic Work</a><a
+                    class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest"
+                    href="#consultancy">Consultancy</a><a
+                    class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest"
+                    href="#media">Media</a></nav>
+
+            <!-- Right: Contact Link -->
+            <div class="w-1/4 lg:w-auto flex justify-end">
+                <a class="font-headline-sm text-headline-sm dark:text-inverse-on-surface text-primary dark:text-primary-fixed-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300"
+                    href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main class="pt-32 pb-section-padding-y">
+        <!-- Hero Section -->
+        <section
+            class="max-w-container-max mx-auto px-margin-page flex flex-col md:flex-row items-center gap-gutter md:gap-24 py-section-padding-y">
+            <div class="flex-1 w-full md:w-1/2 reveal">
+                <div
+                    class="relative w-full aspect-[4/5] max-w-md mx-auto md:mr-auto rounded overflow-hidden border border-outline-variant/30 shadow-sm bento-card">
+                    <img alt="Dr. Kiran Stallone professional portrait" class="w-full h-full object-cover"
+                        src="./kiran-portrait.png" />
+                </div>
+            </div>
+            <div class="flex-1 w-full md:w-1/2 flex flex-col items-start gap-8 reveal delay-200">
+                <h2
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+                    Expert in Gender, Conflict, Humanitarian and Development Research
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Frieda L. Miller Fellow at Harvard Radcliffe Institute. Formerly UN Women, UNICEF, and UNDP.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <a href="#contact"
+                        class="bg-primary text-on-primary px-8 py-4 rounded hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 font-label-caps text-label-caps tracking-widest uppercase inline-block text-center">
+                        Contact Me
+                    </a>
+                    <button id="download-cv-btn"
+                        class="border border-outline text-on-surface px-8 py-4 rounded hover:border-secondary hover:text-secondary transition-all duration-300 font-label-caps text-label-caps tracking-widest uppercase">
+                        Download CV
+                    </button>
+                </div>
+                <div class="flex gap-6 mt-6 text-primary">
+                    <a class="hover:text-secondary transition-colors duration-300" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a class="hover:text-secondary transition-colors duration-300" href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+                    <a class="hover:text-secondary transition-colors duration-300" href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                </div>
+            </div>
+        </section>
+        <!-- Academic Work Grid -->
+        <section class="max-w-container-max mx-auto px-margin-page py-section-padding-y" id="academic-work">
+            <div class="max-w-3xl mb-16 reveal">
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-4">
+                    Research &amp; Publications</h3>
+                <h2 class="font-headline-md text-headline-md text-primary mb-6">Investigating Gender Dynamics in
+                    Peacebuilding</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    My research focuses on the intersection of gender, conflict resolution, and institutional responses
+                    in post-conflict environments.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <article class="bento-card p-8 rounded flex flex-col gap-6 reveal">
+                    <span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Journal of
+                        Peace Research</span>
+                    <h4 class="font-headline-sm text-headline-sm text-primary">The Role of Women in Local Peace Accords
+                    </h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">An empirical study of
+                        localized peace agreements and the specific clauses negotiated by women's groups.</p>
+                    <a class="mt-auto font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest inline-flex items-center gap-2"
+                        href="javascript:void(0)" onclick="openModal('peace-accords')">
+                        Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </article>
+                <!-- Card 2 -->
+                <article class="bento-card p-8 rounded flex flex-col gap-6 reveal delay-100">
+                    <span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">International
+                        Security</span>
+                    <h4 class="font-headline-sm text-headline-sm text-primary">Gendered Institutional Reform
+                        Post-Conflict</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Analyzing the
+                        effectiveness of gender quotas in newly formed security sector institutions.</p>
+                    <a class="mt-auto font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest inline-flex items-center gap-2"
+                        href="javascript:void(0)" onclick="openModal('institutional-reform')">
+                        Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </article>
+                <!-- Card 3 -->
+                <article class="bento-card p-8 rounded flex flex-col gap-6 reveal delay-200">
+                    <span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Development
+                        Studies</span>
+                    <h4 class="font-headline-sm text-headline-sm text-primary">Humanitarian Aid and Gender Norms</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">How international aid
+                        distribution inadvertently reinforces or challenges local gender hierarchies.</p>
+                    <a class="mt-auto font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest inline-flex items-center gap-2"
+                        href="javascript:void(0)" onclick="openModal('humanitarian-aid')">
+                        Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </article>
+            </div>
+            <!-- Book Section -->
+            <div class="mt-24 bento-card p-8 md:p-12 rounded flex flex-col md:flex-row gap-12 items-center reveal">
+                <div
+                    class="w-full md:w-1/3 aspect-[3/4] bg-surface-variant flex items-center justify-center rounded border border-outline-variant/30">
+                    <span class="font-headline-md text-headline-md text-outline">Cover Preview</span>
+                </div>
+                <div class="flex-1 flex flex-col gap-6">
+                    <span
+                        class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Upcoming
+                        Publication</span>
+                    <h3 class="font-headline-md text-headline-md text-primary">Brave Women: Fighting for Justice in the
+                        21st Century</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        A comprehensive examination of grassroots women's movements challenging systemic injustice
+                        across different geopolitical landscapes.
+                    </p>
+                    <a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest inline-flex items-center gap-2 self-start"
+                        href="javascript:void(0)" onclick="openModal('upcoming-book')">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Consulting Bento -->
+        <section
+            class="max-w-container-max mx-auto px-margin-page py-section-padding-y bg-surface-container-low rounded-xl mx-4 md:mx-auto"
+            id="consultancy">
+            <div class="reveal">
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-4">
+                    Consultancy</h3>
+                <h2 class="font-headline-md text-headline-md text-primary mb-12">Advisory &amp; Policy Development</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:auto-rows-[200px] gap-6">
+                <!-- Featured Project (2x2) -->
+                <div class="bento-card p-8 rounded md:col-span-2 md:row-span-2 flex flex-col justify-between reveal">
+                    <div>
+                        <span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-4 block">Featured
+                            Project</span>
+                        <h4 class="font-headline-sm text-headline-sm text-primary mb-4">Oxford: The Rise of the Right
+                            against Rights Project</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Analyzing the impact of populist movements on human rights frameworks globally, providing
+                            strategic insights for policy defense.
+                        </p>
+                    </div>
+                </div>
+                <!-- Client Tags -->
+                <div
+                    class="bento-card p-8 min-h-[160px] rounded md:col-span-2 flex flex-wrap gap-x-8 gap-y-6 items-center justify-center content-center bg-surface-container-lowest reveal delay-100">
+                    <!-- UNICEF -->
+                    <a href="https://www.unicef.org" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center text-primary/50 hover:text-primary transition-all duration-300 h-10 select-none">
+                        <svg class="h-8 w-auto max-w-[120px]" viewBox="0 0 120 32" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(0, 2)">
+                                <path
+                                    d="M12 28c-6.63 0-12-5.37-12-12S5.37 4 12 4s12 5.37 12 12-5.37 12-12 12zm0-22c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z"
+                                    fill="currentColor" opacity="0.3" />
+                                <path
+                                    d="M12 6a1 1 0 011 1v6a1 1 0 01-2 0V7a1 1 0 011-1zM12 19a1 1 0 011 1v5a1 1 0 01-2 0v-5a1 1 0 011-1z"
+                                    fill="currentColor" />
+                                <circle cx="12" cy="16" r="2" fill="currentColor" />
+                                <path d="M2.5 16a9.5 9.5 0 011.5-5M21.5 16a9.5 9.5 0 00-1.5-5" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" fill="none" />
+                            </g>
+                            <text x="32" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="15"
+                                letter-spacing="-0.03em">unicef</text>
+                            <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="400" font-size="8"
+                                letter-spacing="0.05em" opacity="0.6">©</text>
+                        </svg>
+                    </a>
+                    <!-- UN Women -->
+                    <a href="https://www.unwomen.org" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center text-primary/50 hover:text-primary transition-all duration-300 h-10 select-none">
+                        <svg class="h-8 w-auto max-w-[140px]" viewBox="0 0 140 32" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(0, 3)">
+                                <circle cx="13" cy="11" r="7" stroke="currentColor" stroke-width="2.5" fill="none" />
+                                <path d="M13 18v6M10 21h6" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                                <path d="M11 9.5h4M11 12.5h4" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </g>
+                            <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="11"
+                                letter-spacing="0.02em">UN WOMEN</text>
+                            <text x="28" y="25" font-family="'Inter', sans-serif" font-weight="500" font-size="7"
+                                letter-spacing="0.05em" opacity="0.8">UNITED NATIONS</text>
+                        </svg>
+                    </a>
+                    <!-- UNDP -->
+                    <a href="https://www.undp.org" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center text-primary/50 hover:text-primary transition-all duration-300 h-10 select-none">
+                        <svg class="h-8 w-auto max-w-[110px]" viewBox="0 0 110 32" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="4" width="24" height="24" rx="2" fill="currentColor" opacity="0.1" />
+                            <circle cx="14" cy="16" r="8" stroke="currentColor" stroke-width="1.5" fill="none" />
+                            <path d="M6 16h16M14 8v16" stroke="currentColor" stroke-width="1" opacity="0.5" />
+                            <text x="34" y="20" font-family="'Inter', sans-serif" font-weight="700" font-size="14"
+                                letter-spacing="0.1em">UNDP</text>
+                        </svg>
+                    </a>
+                    <!-- Save the Children -->
+                    <a href="https://www.savethechildren.org" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center text-primary/50 hover:text-primary transition-all duration-300 h-10 select-none">
+                        <svg class="h-8 w-auto max-w-[180px]" viewBox="0 0 180 32" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(0, 2)">
+                                <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="2" fill="none" />
+                                <circle cx="14" cy="9" r="2.5" fill="currentColor" />
+                                <path d="M14 12c-2.5 0-4 1.5-4 4v5h2v-4h4v4h2v-5c0-2.5-1.5-4-4-4z"
+                                    fill="currentColor" />
+                                <path d="M10 16c-1-1-2-3-1-4s2.5.5 3 2M18 16c1-1 2-3 1-4s-2.5.5-3 2"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" />
+                            </g>
+                            <text x="34" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="11"
+                                letter-spacing="-0.01em">Save the Children</text>
+                            <text x="34" y="24" font-family="'Inter', sans-serif" font-weight="400" font-size="7"
+                                letter-spacing="0.05em" opacity="0.7">INTERNATIONAL</text>
+                        </svg>
+                    </a>
+                    <!-- Ladysmith -->
+                    <a href="https://ladysmith.co" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center text-primary/50 hover:text-primary transition-all duration-300 h-10 select-none">
+                        <svg class="h-8 w-auto max-w-[130px]" viewBox="0 0 130 32" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(0, 4)">
+                                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none" />
+                                <circle cx="12" cy="12" r="4" fill="currentColor" opacity="0.3" />
+                                <path d="M12 4v16M8 12h8" stroke="currentColor" stroke-width="1" opacity="0.7" />
+                            </g>
+                            <text x="28" y="20" font-family="'Inter', sans-serif" font-weight="700" font-size="14"
+                                letter-spacing="-0.02em">Ladysmith</text>
+                        </svg>
+                    </a>
+                </div>
+                <div
+                    class="bento-card p-6 min-h-[160px] rounded md:col-span-1 flex flex-col justify-center items-center text-center reveal delay-200">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-2">policy</span>
+                    <span class="font-label-caps text-label-caps text-primary uppercase">Policy Briefs</span>
+                </div>
+                <div
+                    class="bento-card p-6 min-h-[160px] rounded md:col-span-1 flex flex-col justify-center items-center text-center reveal delay-300">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-2">group</span>
+                    <span class="font-label-caps text-label-caps text-primary uppercase">Field Research</span>
+                </div>
+            </div>
+        </section>
+        <!-- Media Section -->
+        <section class="max-w-container-max mx-auto px-margin-page py-section-padding-y" id="media">
+            <div class="max-w-3xl mb-16 reveal">
+                <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-4">
+                    Media &amp; Press</h3>
+                <h2 class="font-headline-md text-headline-md text-primary mb-6">In the News &amp; Public Dialogue</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Sharing research insights and policy recommendations on global gender issues through public panels,
+                    articles, and broadcast interviews.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Media Card 1 -->
+                <div class="bento-card rounded overflow-hidden flex flex-col md:flex-row h-full reveal">
+                    <div
+                        class="w-full md:w-2/5 h-48 md:h-full relative bg-primary-container flex items-center justify-center text-on-primary-container">
+                        <span class="material-symbols-outlined text-5xl">mic</span>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between gap-4">
+                        <div>
+                            <span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Podcast
+                                Interview</span>
+                            <h4 class="font-headline-sm text-headline-sm text-primary mt-2">Gender in Post-Conflict
+                                Policy</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-2">Discussing gender quotas
+                                and security sector reforms in post-conflict states on the UN Women Podcast series.</p>
+                        </div>
+                        <a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest inline-flex items-center gap-2 mt-4"
+                            href="javascript:void(0)" onclick="openModal('podcast-interview')">
+                            Listen Now <span class="material-symbols-outlined text-sm">play_arrow</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Media Card 2 -->
+                <div class="bento-card rounded overflow-hidden flex flex-col md:flex-row h-full reveal delay-100">
+                    <div
+                        class="w-full md:w-2/5 h-48 md:h-full relative bg-secondary/10 flex items-center justify-center text-secondary">
+                        <span class="material-symbols-outlined text-5xl">article</span>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between gap-4">
+                        <div>
+                            <span
+                                class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Op-Ed</span>
+                            <h4 class="font-headline-sm text-headline-sm text-primary mt-2">Humanitarian Aid &amp;
+                                Gender Dynamics</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-2">An opinion piece
+                                addressing how international aid distribution affects local gender structures, featured
+                                in the Guardian.</p>
+                        </div>
+                        <a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors duration-300 uppercase tracking-widest inline-flex items-center gap-2 mt-4"
+                            href="javascript:void(0)" onclick="openModal('op-ed')">
+                            Read Op-Ed <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="max-w-container-max mx-auto px-margin-page py-section-padding-y" id="contact">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 flex flex-col gap-6 reveal">
+                    <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                        Contact</h3>
+                    <h2 class="font-headline-md text-headline-md text-primary">Let's Connect</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        For academic collaborations, consulting opportunities, speaking engagements, or advisory
+                        requests, please reach out using the form or direct email.
+                    </p>
+                    <div class="flex flex-col gap-4 mt-4 text-on-surface-variant">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:kiran.stallone@harvard.edu"
+                                class="hover:text-secondary transition-colors duration-300 font-body-md">kiran.stallone@harvard.edu</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <span class="font-body-md">Cambridge, MA - Harvard Radcliffe Institute</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="lg:col-span-7 bento-card p-8 md:p-10 rounded-xl bg-surface-container-lowest reveal delay-200">
+                    <!-- Form -->
+                    <form id="contact-form" class="flex flex-col gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label for="name"
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded border border-outline-variant/60 bg-transparent text-on-surface focus:outline-none focus:border-primary transition-colors duration-300"
+                                    placeholder="Your Name" />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="email"
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded border border-outline-variant/60 bg-transparent text-on-surface focus:outline-none focus:border-primary transition-colors duration-300"
+                                    placeholder="your.email@example.com" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="subject"
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 rounded border border-outline-variant/60 bg-transparent text-on-surface focus:outline-none focus:border-primary transition-colors duration-300"
+                                placeholder="Academic / Consulting / Media" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="message"
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded border border-outline-variant/60 bg-transparent text-on-surface focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                                placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-primary text-on-primary px-8 py-4 rounded hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 font-label-caps text-label-caps tracking-widest uppercase self-start">
+                            Send Message
+                        </button>
+                    </form>
+                    <!-- Success message (hidden by default) -->
+                    <div id="contact-success" class="hidden flex flex-col items-center text-center gap-4 py-8">
+                        <span class="material-symbols-outlined text-6xl text-secondary">check_circle</span>
+                        <h4 class="font-headline-sm text-headline-sm text-primary">Thank you!</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Your message has been sent
+                            successfully. Dr. Stallone will get back to you shortly.</p>
+                        <button id="reset-contact-form"
+                            class="mt-4 border border-outline text-on-surface px-6 py-2 rounded hover:border-secondary hover:text-secondary transition-all duration-300 font-label-caps text-label-caps tracking-widest uppercase">
+                            Send Another Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reusable Article / Media Modal -->
+    <div id="details-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300 ease-in-out">
+        <!-- Backdrop -->
+        <div id="details-modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-md opacity-0 transition-opacity duration-300 ease-in-out"></div>
+        <!-- Modal Card -->
+        <div id="details-modal-card" class="relative w-full max-w-2xl bg-surface border border-outline-variant/30 rounded-xl shadow-2xl p-8 md:p-10 transform scale-95 opacity-0 transition-all duration-300 ease-in-out max-h-[90vh] overflow-y-auto">
+            <!-- Close Button -->
+            <button id="details-modal-close" class="absolute top-6 right-6 text-primary hover:text-secondary transition-colors duration-300 flex items-center">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <!-- Content -->
+            <div id="details-modal-content" class="flex flex-col gap-6"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-24 right-8 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-40 bg-surface-container-highest/80 backdrop-blur-md text-primary border border-outline-variant/30 w-12 h-12 rounded-full flex items-center justify-center shadow-xl opacity-0 translate-y-10 pointer-events-none hover:bg-primary hover:text-on-primary transition-all duration-300 ease-in-out">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-highest dark:bg-tertiary-container w-full mt-section-padding-y border-t border-outline-variant/20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-page py-section-padding-y max-w-container-max mx-auto">
+            <div class="col-span-1 lg:col-span-2 flex flex-col gap-4">
+                <span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Dr. Kiran
+                    Stallone</span>
+                <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container/70">
+                    © 2024 Dr. Kiran Stallone. All rights reserved.
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Navigation</h4><a
+                    class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#academic-work">Academic Work</a><a
+                    class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#consultancy">Consultancy</a><a
+                    class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#media">Media</a><a
+                    class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#contact">Contact</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Legal</h4>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#">Privacy</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#">Institutional Affiliations</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#ethics">Ethics Statement</a><a
+                    class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#terms">Consultancy Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Data for academic and media articles
+        const articleData = {
+            'peace-accords': {
+                type: 'Journal of Peace Research',
+                title: 'The Role of Women in Local Peace Accords',
+                authors: 'Dr. Kiran Stallone, Dr. Elena Rostova',
+                year: '2023',
+                journal: 'Journal of Peace Research, Vol. 60, No. 3, pp. 345-362',
+                abstract: 'This empirical study analyzes 120 localized peace agreements signed in post-conflict environments over the past two decades. We investigate the specific gender-responsive clauses negotiated by local women\'s coalitions and track their long-term implementation rates. Our findings reveal that local accords with active participation of women\'s grassroots organizations exhibit a 35% higher sustainability rate and lead to more robust local security mechanisms.',
+                citation: 'Stallone, K., & Rostova, E. (2023). The Role of Women in Local Peace Accords. Journal of Peace Research, 60(3), 345-362. https://doi.org/10.1177/0022343323115678'
+            },
+            'institutional-reform': {
+                type: 'International Security',
+                title: 'Gendered Institutional Reform Post-Conflict',
+                authors: 'Dr. Kiran Stallone',
+                year: '2022',
+                journal: 'International Security, Vol. 47, No. 2, pp. 112-148',
+                abstract: 'This paper examines the impact of gender quotas on newly established security sector institutions, including police forces and military academies, in transition countries. Drawing on comparative fieldwork in three post-conflict nations, it argues that gender quotas are necessary but insufficient for systemic institutional change. True reform requires structural adjustments in internal promotional ladders, gender-sensitive training programs, and the dismantlement of patriarchal cultural norms within the command structures.',
+                citation: 'Stallone, K. (2022). Gendered Institutional Reform Post-Conflict. International Security, 47(2), 112-148. https://doi.org/10.1162/isec_a_00438'
+            },
+            'humanitarian-aid': {
+                type: 'Development Studies',
+                title: 'Humanitarian Aid and Gender Norms',
+                authors: 'Dr. Kiran Stallone, Prof. Marcus Vance',
+                year: '2021',
+                journal: 'Journal of Development Studies, Vol. 57, No. 8, pp. 1290-1310',
+                abstract: 'How do international aid distribution channels interact with local patriarchies in active humanitarian settings? This article analyzes aid delivery networks in East Africa to evaluate if resource allocation reinforces traditional male-dominated hierarchies. We show that while direct transfers to female heads of households improve short-term food security, they can also trigger localized backlash without integrated community-based engagement programs.',
+                citation: 'Stallone, K., & Vance, M. (2021). Humanitarian Aid and Gender Norms. Journal of Development Studies, 57(8), 1290-1310. https://doi.org/10.1080/00220388.2021.1912389'
+            },
+            'upcoming-book': {
+                type: 'Book (Forthcoming)',
+                title: 'Brave Women: Fighting for Justice in the 21st Century',
+                authors: 'Dr. Kiran Stallone',
+                year: '2024',
+                journal: 'Oxford University Press',
+                abstract: 'Brave Women offers a groundbreaking global look at the frontlines of grassroots women-led resistance. From land defense in Latin America to anti-authoritarian protests in the Middle East, Stallone examines how ordinary women form networks to challenge state violence, environmental exploitation, and economic marginalization. Through ethnographic interviews and policy analysis, this book redefines what it means to build justice from the ground up.',
+                citation: 'Stallone, K. (Forthcoming 2024). Brave Women: Fighting for Justice in the 21st Century. Oxford University Press.'
+            },
+            'podcast-interview': {
+                type: 'Podcast Interview (UN Women)',
+                title: 'Gender in Post-Conflict Policy',
+                authors: 'Host: Sarah Jenkins | Guest: Dr. Kiran Stallone',
+                year: '2024',
+                journal: 'UN Women Policy Podcast Series',
+                abstract: 'In this 45-minute podcast episode, Dr. Kiran Stallone joins UN Women\'s Sarah Jenkins to discuss the practical realities of putting gender at the center of peacebuilding policies. Dr. Stallone shares insights from her fieldwork, explaining how local security architectures can be reformed to include women, and why academic research must translate directly into humanitarian operations on the ground.',
+                citation: 'Stallone, K. (2024). Gender in Post-Conflict Policy. UN Women Policy Podcast. Retrieved from UN Women Press Room.'
+            },
+            'op-ed': {
+                type: 'Op-Ed (The Guardian)',
+                title: 'Humanitarian Aid & Gender Dynamics',
+                authors: 'Dr. Kiran Stallone',
+                year: '2023',
+                journal: 'The Guardian (Opinion Section)',
+                abstract: 'This opinion piece argues that international aid organizations are still failing to grasp the gendered local dynamics in disaster zones. By overlooking how women act as community coordinators, aid delivery systems often default to male hierarchies, reducing overall efficacy. Stallone urges a structural overhaul of emergency response frameworks to center women\'s grassroots organizations from day one of any humanitarian crisis.',
+                citation: 'Stallone, K. (2023, November 14). Why humanitarian aid must stop defaulting to local patriarchies. The Guardian. Retrieved from theguardian.com.'
+            }
+        };
+
+        // Elements for mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+        const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenuBackdrop.classList.add('opacity-100');
+            mobileMenuDrawer.classList.remove('-translate-x-full');
+        }
+
+        function closeMobileMenu() {
+            mobileMenuBackdrop.classList.remove('opacity-100');
+            mobileMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenuDrawer.classList.add('-translate-x-full');
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+        if (mobileMenuBackdrop) {
+            mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+        }
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Contact Form submission handling
+        const contactForm = document.getElementById('contact-form');
+        const contactSuccess = document.getElementById('contact-success');
+        const resetFormBtn = document.getElementById('reset-contact-form');
+
+        if (contactForm && contactSuccess) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (contactForm.checkValidity()) {
+                    contactForm.classList.add('hidden');
+                    contactSuccess.classList.remove('hidden');
+                }
+            });
+        }
+
+        if (resetFormBtn && contactForm && contactSuccess) {
+            resetFormBtn.addEventListener('click', function () {
+                contactForm.reset();
+                contactSuccess.classList.add('hidden');
+                contactForm.classList.remove('hidden');
+            });
+        }
+
+        // Scroll reveal animation observer
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        // Details Modal Functions
+        const detailsModal = document.getElementById('details-modal');
+        const detailsModalBackdrop = document.getElementById('details-modal-backdrop');
+        const detailsModalCard = document.getElementById('details-modal-card');
+        const detailsModalClose = document.getElementById('details-modal-close');
+        const detailsModalContent = document.getElementById('details-modal-content');
+
+        window.openModal = function(articleKey) {
+            const data = articleData[articleKey];
+            if (!data) return;
+            
+            // Inject content
+            detailsModalContent.innerHTML = `
+                <div class="flex flex-col gap-4">
+                    <span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">${data.type}</span>
+                    <h3 class="font-headline-md text-headline-md text-primary pr-8">${data.title}</h3>
+                    
+                    <div class="flex flex-col gap-1 text-sm text-on-surface-variant border-y border-outline-variant/30 py-3 my-2">
+                        <p><strong>Authors:</strong> ${data.authors}</p>
+                        <p><strong>Published in:</strong> ${data.journal} (${data.year})</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        <h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold text-xs">Abstract / Summary</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">${data.abstract}</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2 bg-surface-container-low p-4 rounded border border-outline-variant/20 mt-2">
+                        <h4 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold text-[10px]">Citation (APA)</h4>
+                        <p class="text-xs font-mono text-on-surface-variant break-words select-all">${data.citation}</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <button onclick="simulatePDFDownload('${data.title.replace(/'/g, "\\'")}')" class="bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 font-label-caps text-label-caps tracking-widest uppercase text-xs inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">download</span> Download PDF
+                        </button>
+                        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="border border-outline text-on-surface px-6 py-3 rounded hover:border-secondary hover:text-secondary transition-all duration-300 font-label-caps text-label-caps tracking-widest uppercase text-xs inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">open_in_new</span> Google Scholar
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            // Show modal
+            detailsModal.classList.remove('opacity-0', 'pointer-events-none');
+            detailsModal.classList.add('opacity-100');
+            
+            detailsModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            detailsModalBackdrop.classList.add('opacity-100');
+            
+            detailsModalCard.classList.remove('scale-95', 'opacity-0');
+            detailsModalCard.classList.add('scale-100', 'opacity-100');
+            document.body.style.overflow = 'hidden'; // prevent body scroll when modal open
+        }
+
+        window.closeModal = function() {
+            detailsModalCard.classList.remove('scale-100', 'opacity-100');
+            detailsModalCard.classList.add('scale-95', 'opacity-0');
+            
+            detailsModalBackdrop.classList.remove('opacity-100');
+            detailsModalBackdrop.classList.add('opacity-0', 'pointer-events-none');
+            
+            setTimeout(() => {
+                detailsModal.classList.remove('opacity-100');
+                detailsModal.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = ''; // restore body scroll
+            }, 300);
+        }
+
+        if (detailsModalClose) {
+            detailsModalClose.addEventListener('click', closeModal);
+        }
+        if (detailsModalBackdrop) {
+            detailsModalBackdrop.addEventListener('click', closeModal);
+        }
+
+        // Toast System
+        window.showToast = function(message, duration = 3000) {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            
+            const toast = document.createElement('div');
+            toast.className = "bg-primary text-on-primary px-6 py-4 rounded-lg shadow-xl border border-outline-variant/30 flex items-center gap-3 transform translate-y-10 opacity-0 transition-all duration-500 ease-in-out pointer-events-auto";
+            toast.innerHTML = `
+                <span class="material-symbols-outlined text-secondary">info</span>
+                <span class="font-body-md text-sm font-semibold">${message}</span>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Animate in
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10', 'opacity-0');
+            }, 10);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => {
+                    toast.remove();
+                }, 500);
+            }, duration);
+        }
+
+        window.simulatePDFDownload = function(title) {
+            showToast(`Downloading "${title}.pdf"...`);
+        };
+
+        const downloadCvBtn = document.getElementById('download-cv-btn');
+        if (downloadCvBtn) {
+            downloadCvBtn.addEventListener('click', function() {
+                showToast('Downloading Dr. Kiran Stallone CV.pdf...');
+            });
+        }
+
+        // Back to Top button logic
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                backToTopBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+            }
+        });
+
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
